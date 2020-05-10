@@ -1,6 +1,18 @@
 Reddit News
 ====
-首先创建数据库news_content.sql
+To use it, please first create database news_content.sql, set the format 'utf8-general-ci'
+
+Then import sql files in news_content folder to news_content.sql which you havd created just now
+
+Next, modify .php files in the folder navigation/reverse/content, to ensure that the username and password matches your database
+
+Also, open PDO extensions in php
+
+The website is web114.xyz(https://web114.xyz)
+
+****
+
+首先创建数据库news_content.sql， 编码设置为 utf8-general-ci
 
 然后依次导入news_content文件夹下的三个sql文件
 
