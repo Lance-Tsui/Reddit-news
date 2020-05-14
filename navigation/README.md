@@ -4,11 +4,12 @@
 
 Re-Develop from the original program. [Morey_个人导航](https://github.com/Mirko4512/daohang/)
 
-Added some interfaces, including daily news in Reddit about China (https://www.reddit.com/r/hanren/)
+Added some interfaces, including daily news in Reddit about [China](https://www.reddit.com/r/hanren/)
 
 Use Semantic UI to beauty the web page
 
 Website Link: [web114.xyz](https://web114.xyz)
+
 
 
 # 遨游星瀚 丨个人导航
