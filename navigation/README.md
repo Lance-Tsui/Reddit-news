@@ -6,6 +6,8 @@ Re-Develop from the original program. [Morey_个人导航](https://github.com/Mi
 
 Added some interfaces, including daily news in Reddit about [China](https://www.reddit.com/r/hanren/)
 
+Those news in Reddit are from China, however, because of censorship to so-called 'bad-news', they have to me 'moved' quickly to Reddit or other platforms.
+
 Use Semantic UI to beauty the web page
 
 Website Link: [web114.xyz](https://web114.xyz)
