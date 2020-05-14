@@ -15,7 +15,7 @@ Website Link: [web114.xyz](https://web114.xyz)
 
  ## 简介
 
-在原基础上 (https://github.com/Mirko4512/daohang/) 做了二次开发，增加了某些界面，例如翻车新闻搬运。
+在原基础上 [Morey_个人导航](https://github.com/Mirko4512/daohang/) 做了二次开发，增加了某些界面，例如翻车新闻搬运。
 
 使用Semantic UI 实现网页美化。
 
