@@ -8,7 +8,7 @@ Next, modify .php files in the folder navigation/reverse/content, to ensure that
 
 Also, open PDO extensions in php
 
-The website is web114.xyz(https://web114.xyz)
+The website is [web114.xyz](https://web114.xyz)
 
 ****
 
@@ -20,4 +20,4 @@ The website is web114.xyz(https://web114.xyz)
 
 记得要开启php的PDO扩展
 
-网址：web114.xyz(https://web114.xyz)
+网址：[web114.xyz](https://web114.xyz)
