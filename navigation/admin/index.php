@@ -4,7 +4,7 @@
 </head>
 <body>
     <br>
-    <form method = 'POST' action = 'manage.php'>
+    <form method = 'POST' action = 'insert.php'>
         
         <table width = "600" border = "0">
 

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Update</title>
+<title>Manage</title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <link rel = "stylesheet" href = "main.css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -30,7 +30,7 @@ font-family:Arial;
 </header>
 <section class="main">
 <br>
-<center><h3>News Update</h3></center>
+<center><h3>News Management</h3></center>
 <form method = 'POST' action = 'operate.php'>
 <table class="table" border="1" align="center">
     <thead>
@@ -53,17 +53,59 @@ font-family:Arial;
         <td> <input name = "link[]" placeholder="link" /></td>
         
     </tr>
-    
+    <tr>
+        <td class="td">2</td>
+        <td> <input name = "id[]" maxlength = "4" placeholder="id" /></td>
+        <td> <input name = "item[]" maxlength = "1" placeholder="item" /></td>
+        <td> <input name = "type[]" maxlength = "10" placeholder="type" /></td>
+        <td> <input name = "note[]" placeholder="note" /></td>
+        <td> <input name = "link[]" placeholder="link" /></td>
+        
+    </tr> 
     </tbody>
 </table>
-
-<input  type = "submit" class = "button" name = "submit" type = "submit" value = "update">
+<button type = "button" class = "button" onclick="fun()">Add Row</button>
+<button type = "button" class = "button" onclick="del()">Delete Row</button>
+<input  type = "submit" class = "button" name = "submit" type = "submit" value = "insert">
 </form>
     
 </section>
     <footer></footer>
 </div>
+    
+<script type="text/javascript">  
+	//前面的序号1,2,3......                 
+    var i = 1;
+    var length = 2;
+    
+    $(".td").each(function(){
+        $(this).html(i++);
+    })
+	//添加一行
+    
+    function fun(){
+        
+        
+        if(length < 6){
+            var $td = $("#clo").clone();       //增加一行,克隆第一个对象
 
+            $(".table").append($td);
+            var i = 1;
+            $(".td").each(function(){       //增加一行后重新更新序号1,2,3......
+            $(this).html(i++);
+            })
+            $("table tr:last").find(":input").val('');   //将尾行元素克隆来的保存的值清空
+            length = length + 1;
+        }
+    }
+	//删除一行
+    function del(){
+        $("table tr:not(:first):not(:first):last").remove();//移除最后一行,并且保留前两行
+        if(length >= 2){
+            length = length - 1;
+        }
+    }
+</script>
  </body> 
 </html>
 

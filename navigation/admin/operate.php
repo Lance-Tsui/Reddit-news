@@ -14,7 +14,7 @@
     $conn = new PDO("mysql:host=$servername;dbname=$databasename",$username,$password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conn->query("SET NAMES utf8");
-    if($_POST['submit'] == 'manage'){
+    if($_POST['submit'] == 'insert'){
         for($i = 0; $i < $length; $i++){
             if(is_valid($_POST['id'][$i]) and is_valid($_POST['item'][$i]) and
                is_valid($_POST['type'][$i]) and is_valid($_POST['link'][$i])){ 
@@ -43,7 +43,7 @@
         }
     }
     
-    echo "<script>history.back(-1);</script>";
+    echo "<meta http-equiv='refresh' content='1;url= " . $_POST['submit'] . ".php'>";
     exit();
     
 ?>
