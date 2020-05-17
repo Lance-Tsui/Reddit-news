@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+#container{
+    /*保证footer是相对于container位置绝对定位*/
+    position:relative;  
+    width:100%;
+    min-height:100%; 
+    /*设置padding-bottom值大于等于footer的height值，以保证main的内容能够全部显示出来而不被footer遮盖；*/  
+    padding-bottom: 100px;  
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 50px;
+    background: #FBDDFC;
+}
+.main{
+    width: 100%;
+    height: 200px;
+    background: #FFFFFF;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    background: #D9FFCF;
+}
+
+.button { /* 按钮美化 */
+	width: 300px; /* 宽度 */
+	height: 40px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 5px; /* 边框半径 */
+	background: #4CAF50; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 17px; /* 字体大小 */
+}
+.button:hover { /* 鼠标移入按钮范围时改变颜色 */
+	background: #5599FF;
+}

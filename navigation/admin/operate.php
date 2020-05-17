@@ -14,7 +14,7 @@
     $conn = new PDO("mysql:host=$servername;dbname=$databasename",$username,$password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conn->query("SET NAMES utf8");
-    if($_POST['submit'] == 'insert'){
+    if($_POST['submit'] == 'manage'){
         for($i = 0; $i < $length; $i++){
             if(is_valid($_POST['id'][$i]) and is_valid($_POST['item'][$i]) and
                is_valid($_POST['type'][$i]) and is_valid($_POST['link'][$i])){ 
@@ -42,7 +42,8 @@
             echo "<script>confirm('update successful')</script>";
         }
     }
-    echo "<script>window.location.href = 'manage.php';</script>";
+    
+    echo "<script>history.back(-1);</script>";
     exit();
     
 ?>
