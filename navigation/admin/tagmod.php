@@ -84,7 +84,7 @@ font-family:Arial;
     }
     
 ?>
-<div>
+<form method = 'POST' action = 'operate.php'>
     <table class="table" border="1" align="center">
     <thead>
     <tr>
@@ -95,6 +95,7 @@ font-family:Arial;
         <th>content</th>
         <th>content_weight</th>
         <th>content_link</th>
+        <th>operation</th>
     </tr>
     </thead>
     <tbody>
@@ -106,6 +107,8 @@ font-family:Arial;
         <td> <input name = "content[]" placeholder="content" id = "input_0_3"/></td>
         <td> <input name = "con_weight[]" placeholder="con_weight" id = "input_0_4"/></td>
         <td> <input name = "con_link[]" placeholder="con_link" id = "input_0_5"/></td>
+        <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
+             <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
     <tr>
         
@@ -115,6 +118,8 @@ font-family:Arial;
         <td> <input name = "content[]" placeholder="content" id = "input_1_3" /></td>
         <td> <input name = "con_weight[]" placeholder="con_weight" id = "input_1_4"/></td>
         <td> <input name = "con_link[]" placeholder="con_link" id = "input_1_5"/></td>
+        <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
+             <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
     <tr>
         
@@ -124,6 +129,8 @@ font-family:Arial;
         <td> <input name = "content[]" placeholder="content" id = "input_2_3"/></td>
         <td> <input name = "con_weight[]" placeholder="con_weight" id = "input_2_4"/></td>
         <td> <input name = "con_link[]" placeholder="con_link" id = "input_2_5"/></td>
+        <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
+             <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
     <tr>
         
@@ -133,10 +140,12 @@ font-family:Arial;
         <td> <input name = "content[]" placeholder="content" id = "input_3_3"/></td>
         <td> <input name = "con_weight[]" placeholder="con_weight" id = "input_3_4"/></td>
         <td> <input name = "con_link[]" placeholder="con_link" id = "input_3_5"/></td>
+        <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
+             <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
     </tbody>
 </table>
-</div> 
+</form> 
 </section>
     <footer></footer>
 </div>
