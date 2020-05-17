@@ -64,9 +64,9 @@ font-family:Arial;
     </tr> 
     </tbody>
 </table>
-<button class = "button" onclick="fun()">Add Row</button>
-<button class = "button" onclick="del()">Delete Row</button>
-<input  class = "button" name = "submit" type = "submit" value = "manage">
+<button type = "button" class = "button" onclick="fun()">Add Row</button>
+<button type = "button" class = "button" onclick="del()">Delete Row</button>
+<input  type = "submit" class = "button" name = "submit" type = "submit" value = "manage">
 </form>
     
 </section>
