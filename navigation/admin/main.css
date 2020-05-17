@@ -49,3 +49,13 @@ footer{
 .button:hover { /* 鼠标移入按钮范围时改变颜色 */
 	background: #5599FF;
 }
+.shortselect{  
+    background:#fafdfe;  
+    height:28px;  
+    width:180px;  
+    line-height:28px;  
+    border:1px solid #9bc0dd;  
+    -moz-border-radius:2px;  
+    -webkit-border-radius:2px;  
+    border-radius:2px;  
+}  

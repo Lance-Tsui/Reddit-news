@@ -25,7 +25,7 @@ font-family:Arial;
 <div id="container">
 <header>
 <button class = "button" onclick="window.location.href = 'insert.php'">News Management</button>
-<button class = "button" onclick="">Index Management</button>
+<button class = "button" onclick="window.location.href = 'tagmod.php'">Index Management</button>
 <button class = "button" onclick="window.location.href = 'update.php'">News Update</button>
 </header>
 <section class="main">
@@ -95,7 +95,7 @@ font-family:Arial;
             }
         }
         catch(PDOException $e) {     
-                echo $sql . "<br>" . $e->getMessage();
+            echo $sql . "<br>" . $e->getMessage();
         }
     }
 ?>
