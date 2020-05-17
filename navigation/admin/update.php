@@ -57,7 +57,7 @@ font-family:Arial;
     </tbody>
 </table>
 
-<input  class = "button" name = "submit" type = "submit" value = "update">
+<input  type = "submit" class = "button" name = "submit" type = "submit" value = "update">
 </form>
     
 </section>
