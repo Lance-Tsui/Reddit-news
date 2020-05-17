@@ -43,7 +43,6 @@
         }
     }
     
-    echo "<meta http-equiv='refresh' content='1;url= " . $_POST['submit'] . ".php'>";
-    exit();
+    echo "<script>alert('jumping to original page...');location.href='".$_SERVER["HTTP_REFERER"]."';</script>"; 
     
 ?>
