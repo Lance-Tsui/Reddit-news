@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 07, 2020 at 05:48 AM
+-- Generation Time: May 17, 2020 at 02:53 AM
 -- Server version: 5.5.62-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.29
 
@@ -31,16 +31,6 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `item` text NOT NULL,
   `content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `comment`
---
-
-INSERT INTO `comment` (`id`, `item`, `content`) VALUES
-('0351', 'c', 'so nice'),
-('0351', 'b', '我亲自部署'),
-('0351', 'g', '测试'),
-('0354', 'b', '倒车速度越来越快了');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
