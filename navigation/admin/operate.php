@@ -6,7 +6,10 @@
 ?>
 
 <?php
-    $length = count($_POST['id']);
+    if(!empty($_POST['id'])){
+        $length = count($_POST['id']);
+    }
+    
     $servername = "127.0.0.1";
     $databasename = "news_content";
     $username = "root";
@@ -26,7 +29,7 @@
             }
         }
         echo "<script>confirm('add successful!')</script>";
-    }else if($_POST['submit'] = 'update'){
+    }else if($_POST['submit'] == 'update'){
         
         $sql = $conn->prepare("SELECT * FROM `picture` WHERE `id` = :id and `item` = :item");
         $sql->execute(array(':id' => $_POST['id'][0], ':item' => $_POST['item'][0]));
@@ -40,6 +43,54 @@
             
             $conn->exec($sql);
             echo "<script>confirm('update successful')</script>";
+        }
+    }else if($_POST['submit'] == 'up_tag'){
+        $category = $_POST['input_category'];
+        $type = $_POST['input_type'];
+        $rank = $_POST['input_rank'];
+        $content = $_POST['input_content'];
+        $weight = $_POST['input_weight'];
+        $link = $_POST['input_link'];
+        
+        $sql = $conn->prepare("SELECT * FROM `navigation` WHERE `category` = :category and `cat_type` = :type
+                               and `cat_weight` = :rank and `content` = :content and `content_weight` = :weight
+                               and `content_link` = :link ");
+        $sql->execute(array(':category'=>$category, ':type'=>$type, ':rank'=>$rank, ':content'=>$content,
+                            ':weight'=>$weight, ':link'=>$link));
+        $numcount = $sql->rowcount();
+        if($numcount == 0){
+            $sql = "INSERT INTO navigation (category, cat_type, cat_weight, content, content_weight, content_link)
+                        VALUES ('" . $category . "', " . $type . ", " . $rank . ", '" 
+                        . $content . "', "  . $weight . ", '" . $link . "')";
+            $conn->exec($sql);
+            echo "<script>confirm('insert successful')</script>";
+        }else{
+            
+        }
+        
+    }else if($_POST['submit'] == 'del_tag'){
+        $category = $_POST['input_category'];
+        $type = $_POST['input_type'];
+        $rank = $_POST['input_rank'];
+        $content = $_POST['input_content'];
+        $weight = $_POST['input_weight'];
+        $link = $_POST['input_link'];
+        $sql = $conn->prepare("SELECT * FROM `navigation` WHERE `category` = :category and `cat_type` = :type
+                               and `cat_weight` = :rank and `content` = :content and `content_weight` = :weight
+                               and `content_link` = :link ");
+        $sql->execute(array(':category'=>$category, ':type'=>$type, ':rank'=>$rank, ':content'=>$content,
+                            ':weight'=>$weight, ':link'=>$link));
+        $numcount = $sql->rowcount();
+        if($numcount == 0){
+            echo "<script>confirm('no sql matches')</script>";
+        }else{
+            $sql = "DELETE FROM `navigation` WHERE `category` = '" . $category . "' and `cat_type` = " 
+                               . $type . " and `cat_weight` = " . $rank . " and `content` = '" . $content 
+                               . "' and `content_weight` = " . $weight . " and `content_link` = '"
+                               . $link . "';";
+             
+            $conn->exec($sql);
+            echo "<script>confirm('delete successful')</script>";
         }
     }
     

@@ -5,6 +5,10 @@
 <html>
 <head>
 <meta charset="utf-8">
+<META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
+<META HTTP-EQUIV="expires" CONTENT="0">
+
 <title>Update</title>
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
@@ -101,45 +105,45 @@ font-family:Arial;
     <tbody>
     <tr>
         
-        <td> <input name = "category[]" placeholder="category" id = "input_0_0"/></td>
-        <td> <input name = "cat_type[]" placeholder="cat_type" id = "input_0_1"/></td>
-        <td> <input name = "cat_weight[]" placeholder="cat_weight" id = "input_0_2"/></td>
-        <td> <input name = "content[]" placeholder="content" id = "input_0_3"/></td>
-        <td> <input name = "con_weight[]" placeholder="con_weight" id = "input_0_4"/></td>
-        <td> <input name = "con_link[]" placeholder="con_link" id = "input_0_5"/></td>
+        <td> <input name = "input_category" placeholder="category" id = "input_0_0"/></td>
+        <td> <input name = "input_type" placeholder="cat_type" id = "input_0_1"/></td>
+        <td> <input name = "input_rank" placeholder="cat_weight" id = "input_0_2" /></td>
+        <td> <input name = "input_content" placeholder="content" id = "input_0_3"/></td>
+        <td> <input name = "input_weight" placeholder="con_weight" id = "input_0_4"/></td>
+        <td> <input name = "input_link" placeholder="con_link" id = "input_0_5"/></td>
         <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
              <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
     <tr>
         
-        <td> <input name = "category[]" placeholder="category" id = "input_1_0"/></td>
-        <td> <input name = "cat_type[]" placeholder="cat_type" id = "input_1_1"/></td>
-        <td> <input name = "cat_weight[]" placeholder="cat_weight" id = "input_1_2"/></td>
-        <td> <input name = "content[]" placeholder="content" id = "input_1_3" /></td>
-        <td> <input name = "con_weight[]" placeholder="con_weight" id = "input_1_4"/></td>
-        <td> <input name = "con_link[]" placeholder="con_link" id = "input_1_5"/></td>
+        <td> <input name = "input_category" placeholder="category" id = "input_1_0"/></td>
+        <td> <input name = "input_type" placeholder="cat_type" id = "input_1_1"/></td>
+        <td> <input name = "input_rank" placeholder="cat_weight" id = "input_1_2" /></td>
+        <td> <input name = "input_content" placeholder="content" id = "input_1_3" /></td>
+        <td> <input name = "input_weight" placeholder="con_weight" id = "input_1_4"/></td>
+        <td> <input name = "input_link" placeholder="con_link" id = "input_1_5" /></td>
         <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
              <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
     <tr>
         
-        <td> <input name = "category[]" placeholder="category" id = "input_2_0"/></td>
-        <td> <input name = "cat_type[]" placeholder="cat_type" id = "input_2_1"/></td>
-        <td> <input name = "cat_weight[]" placeholder="cat_weight" id = "input_2_2"/></td>
-        <td> <input name = "content[]" placeholder="content" id = "input_2_3"/></td>
-        <td> <input name = "con_weight[]" placeholder="con_weight" id = "input_2_4"/></td>
-        <td> <input name = "con_link[]" placeholder="con_link" id = "input_2_5"/></td>
+        <td> <input name = "input_category" placeholder="category" id = "input_2_0"/></td>
+        <td> <input name = "input_type" placeholder="cat_type" id = "input_2_1"/></td>
+        <td> <input name = "input_rank" placeholder="cat_weight" id = "input_2_2"/></td>
+        <td> <input name = "input_content" placeholder="content" id = "input_2_3"/></td>
+        <td> <input name = "input_weight" placeholder="con_weight" id = "input_2_4"/></td>
+        <td> <input name = "input_link" placeholder="con_link" id = "input_2_5"/></td>
         <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
              <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
     <tr>
         
-        <td> <input name = "category[]" placeholder="category" id = "input_3_0"/></td>
-        <td> <input name = "cat_type[]" placeholder="cat_type" id = "input_3_1"/></td>
-        <td> <input name = "cat_weight[]" placeholder="cat_weight" id = "input_3_2"/></td>
-        <td> <input name = "content[]" placeholder="content" id = "input_3_3"/></td>
-        <td> <input name = "con_weight[]" placeholder="con_weight" id = "input_3_4"/></td>
-        <td> <input name = "con_link[]" placeholder="con_link" id = "input_3_5"/></td>
+        <td> <input name = "input_category" placeholder="category" id = "input_3_0"/></td>
+        <td> <input name = "input_type" placeholder="cat_type" id = "input_3_1"/></td>
+        <td> <input name = "input_rank" placeholder="cat_weight" id = "input_3_2"/></td>
+        <td> <input name = "input_content" placeholder="content" id = "input_3_3"/></td>
+        <td> <input name = "input_weight" placeholder="con_weight" id = "input_3_4"/></td>
+        <td> <input name = "input_link" placeholder="con_link" id = "input_3_5"/></td>
         <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
              <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
@@ -159,7 +163,7 @@ font-family:Arial;
 <script>
     
 function func(){
-
+    
     var selected = $('select option:selected').val();
     var temp=<?php echo json_encode($type_arr);?>;
     var tag_list = Array();
@@ -173,6 +177,12 @@ function func(){
         for(var j = 0; j < tag_list[i].length; j++){
             var temp_id = "input" + "_" + i + "_" + j ;
             document.getElementById(temp_id).value = tag_list[i][j];
+        }
+    }
+    for(var i = tag_list.length; i < 4; i++){
+        for(var j = 0; j < 7; j++){
+            var temp_id = "input" + "_" + i + "_" + j ;
+            document.getElementById(temp_id).value = '';
         }
     }
     
