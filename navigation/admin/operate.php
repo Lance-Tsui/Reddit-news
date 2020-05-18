@@ -45,13 +45,18 @@
             echo "<script>confirm('update successful')</script>";
         }
     }else if($_POST['submit'] == 'up_tag'){
-        $category = $_POST['input_category'];
-        $type = $_POST['input_type'];
-        $rank = $_POST['input_rank'];
-        $content = $_POST['input_content'];
-        $weight = $_POST['input_weight'];
-        $link = $_POST['input_link'];
-        
+        $category = $_POST['hidden_category'];
+        $type = $_POST['hidden_type'];
+        $rank = $_POST['hidden_rank'];
+        $content = $_POST['hidden_content'];
+        $weight = $_POST['hidden_weight'];
+        $link = $_POST['hidden_link'];
+        $new_category = $_POST['input_category'];
+        $new_type = $_POST['input_type'];
+        $new_rank = $_POST['input_rank'];
+        $new_content = $_POST['input_content'];
+        $new_weight = $_POST['input_weight'];
+        $new_link = $_POST['input_link'];
         $sql = $conn->prepare("SELECT * FROM `navigation` WHERE `category` = :category and `cat_type` = :type
                                and `cat_weight` = :rank and `content` = :content and `content_weight` = :weight
                                and `content_link` = :link ");
@@ -60,12 +65,21 @@
         $numcount = $sql->rowcount();
         if($numcount == 0){
             $sql = "INSERT INTO navigation (category, cat_type, cat_weight, content, content_weight, content_link)
-                        VALUES ('" . $category . "', " . $type . ", " . $rank . ", '" 
-                        . $content . "', "  . $weight . ", '" . $link . "')";
+                        VALUES ('" . $new_category . "', " . $new_type . ", " . $new_rank . ", '" 
+                        . $new_content . "', "  . $new_weight . ", '" . $new_link . "')";
             $conn->exec($sql);
             echo "<script>confirm('insert successful')</script>";
         }else{
-            
+            $sql = "DELETE FROM `navigation` WHERE `category` = '" . $category . "' and `cat_type` = " 
+                               . $type . " and `cat_weight` = " . $rank . " and `content` = '" . $content 
+                               . "' and `content_weight` = " . $weight . " and `content_link` = '"
+                               . $link . "';";
+            $conn->exec($sql);
+            $sql = "INSERT INTO navigation (category, cat_type, cat_weight, content, content_weight, content_link)
+                        VALUES ('" . $new_category . "', " . $new_type . ", " . $new_rank . ", '" 
+                        . $new_content . "', "  . $new_weight . ", '" . $new_link . "')";
+            $conn->exec($sql);
+            echo "<script>confirm('update successful')</script>";
         }
         
     }else if($_POST['submit'] == 'del_tag'){

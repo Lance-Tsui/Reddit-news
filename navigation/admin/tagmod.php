@@ -88,7 +88,7 @@ font-family:Arial;
     }
     
 ?>
-<form method = 'POST' action = 'operate.php'>
+
     <table class="table" border="1" align="center">
     <thead>
     <tr>
@@ -103,6 +103,7 @@ font-family:Arial;
     </tr>
     </thead>
     <tbody>
+    <form method = 'POST' action = 'operate.php'>
     <tr>
         
         <td> <input name = "input_category" placeholder="category" id = "input_0_0"/></td>
@@ -111,9 +112,23 @@ font-family:Arial;
         <td> <input name = "input_content" placeholder="content" id = "input_0_3"/></td>
         <td> <input name = "input_weight" placeholder="con_weight" id = "input_0_4"/></td>
         <td> <input name = "input_link" placeholder="con_link" id = "input_0_5"/></td>
+        
+        
+        
         <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
              <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
+    <tr>
+        <input name = "hidden_category" type = "hidden" id = "hidden_0_0"/>
+        <input name = "hidden_type" type = "hidden" id = "hidden_0_1"/>
+        <input name = "hidden_rank" type = "hidden" id = "hidden_0_2"/>
+        <input name = "hidden_content" type = "hidden" id = "hidden_0_3"/>
+        <input name = "hidden_weight" type = "hidden" id = "hidden_0_4"/>
+        <input name = "hidden_link" type = "hidden" id = "hidden_0_5"/>
+    </tr>
+    </form>
+        
+    <form method = 'POST' action = 'operate.php'>
     <tr>
         
         <td> <input name = "input_category" placeholder="category" id = "input_1_0"/></td>
@@ -122,9 +137,22 @@ font-family:Arial;
         <td> <input name = "input_content" placeholder="content" id = "input_1_3" /></td>
         <td> <input name = "input_weight" placeholder="con_weight" id = "input_1_4"/></td>
         <td> <input name = "input_link" placeholder="con_link" id = "input_1_5" /></td>
+        
+        
         <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
              <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
+    <tr>
+        <input name = "hidden_category" type = "hidden" id = "hidden_1_0"/>
+        <input name = "hidden_type" type = "hidden" id = "hidden_1_1"/>
+        <input name = "hidden_rank" type = "hidden" id = "hidden_1_2"/>
+        <input name = "hidden_content" type = "hidden" id = "hidden_1_3"/>
+        <input name = "hidden_weight" type = "hidden" id = "hidden_1_4"/>
+        <input name = "hidden_link" type = "hidden" id = "hidden_1_5"/>
+    </tr>    
+    </form>
+        
+    <form method = 'POST' action = 'operate.php'>
     <tr>
         
         <td> <input name = "input_category" placeholder="category" id = "input_2_0"/></td>
@@ -133,9 +161,24 @@ font-family:Arial;
         <td> <input name = "input_content" placeholder="content" id = "input_2_3"/></td>
         <td> <input name = "input_weight" placeholder="con_weight" id = "input_2_4"/></td>
         <td> <input name = "input_link" placeholder="con_link" id = "input_2_5"/></td>
+        
+        
         <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
              <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
+    
+    <tr>
+        <input name = "hidden_category" type = "hidden" id = "hidden_2_0"/>
+        <input name = "hidden_type" type = "hidden" id = "hidden_2_1"/>
+        <input name = "hidden_rank" type = "hidden" id = "hidden_2_2"/>
+        <input name = "hidden_content" type = "hidden" id = "hidden_2_3"/>
+        <input name = "hidden_weight" type = "hidden" id = "hidden_2_4"/>
+        <input name = "hidden_link" type = "hidden" id = "hidden_2_5"/>
+    </tr>
+        
+    </form>
+    
+    <form method = 'POST' action = 'operate.php'>
     <tr>
         
         <td> <input name = "input_category" placeholder="category" id = "input_3_0"/></td>
@@ -144,17 +187,35 @@ font-family:Arial;
         <td> <input name = "input_content" placeholder="content" id = "input_3_3"/></td>
         <td> <input name = "input_weight" placeholder="con_weight" id = "input_3_4"/></td>
         <td> <input name = "input_link" placeholder="con_link" id = "input_3_5"/></td>
+        
+        
         <td> <input name = "submit" class = "button-small" type = "submit" value = "up_tag">
              <input name = "submit" class = "button-secsmall" type = "submit" value = "del_tag"></td>
     </tr>
+    <tr>
+        <input name = "hidden_category" type = "hidden" id = "hidden_3_0"/>
+        <input name = "hidden_type" type = "hidden" id = "hidden_3_1"/>
+        <input name = "hidden_rank" type = "hidden" id = "hidden_3_2"/>
+        <input name = "hidden_content" type = "hidden" id = "hidden_3_3"/>
+        <input name = "hidden_weight" type = "hidden" id = "hidden_3_4"/>
+        <input name = "hidden_link" type = "hidden" id = "hidden_3_5"/>
+    </tr>
+    </form>
     </tbody>
 </table>
-</form> 
+
+    
+    
+    
+    
+
+
 </section>
     <footer></footer>
 </div>
 
  </body> 
+    
 </html>
 
 
@@ -176,13 +237,17 @@ function func(){
     for(var i = 0; i < tag_list.length; i++){
         for(var j = 0; j < tag_list[i].length; j++){
             var temp_id = "input" + "_" + i + "_" + j ;
+            var hidden_id = "hidden" + "_" + i + "_" + j;
             document.getElementById(temp_id).value = tag_list[i][j];
+            document.getElementById(hidden_id).value = tag_list[i][j];
         }
     }
     for(var i = tag_list.length; i < 4; i++){
         for(var j = 0; j < 7; j++){
             var temp_id = "input" + "_" + i + "_" + j ;
+            var hidden_id = "hidden" + "_" + i + "_" + j;
             document.getElementById(temp_id).value = '';
+            document.getElementById(hidden_id).value = '';
         }
     }
     
