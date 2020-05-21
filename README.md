@@ -4,7 +4,7 @@ To use it, please first create database news_content.sql, set the format 'utf8-g
 
 Then import sql files in news_content folder to news_content.sql which you havd created just now
 
-Next, modify .php files in the folder navigation/reverse/content, to ensure that the username and password matches your database
+Next, modify .php files in the folder navigation/reverse/content and navigation/admin, to ensure that the username and password matches your database
 
 Also, open PDO extensions in php
 
