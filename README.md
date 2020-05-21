@@ -1,4 +1,4 @@
-Reddit News
+Web Navigation System
 ====
 To use it, please first create database news_content.sql, set the format 'utf8-general-ci'
 
