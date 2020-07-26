@@ -8,6 +8,8 @@ Next, modify .php files in the folder navigation/reverse/content and navigation/
 
 Also, open PDO extensions in php
 
+the purpose is to give a recommandation to Chinese Internet users who just used VPN to access uncensored Internet
+
 The website is [web114.xyz](https://web114.xyz)
 
 ****
